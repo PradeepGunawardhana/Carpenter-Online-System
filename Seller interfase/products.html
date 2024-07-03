@@ -1,0 +1,456 @@
+<html>
+    <head>
+        <title>SLWoody</title>
+        <link rel="icon" type="image/png" href="1copy.png" >
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                
+            }
+            #upbar{
+                background-color: lightgray;
+                width: 100%;
+                height: 75px;
+                position: fixed;
+                z-index: 2;
+               
+            }
+            .customLink{
+                text-decoration: none;
+                color: black;
+                position: relative;
+                font-size: 20px; 
+                top: 0px;
+                bottom: 95%;
+                
+            
+            }
+            #logout{
+                left: 71%;
+                right: 50px;
+                
+            }
+            #dashbord{
+                left: 50%;
+                right: 50px;
+            }
+            #orders{
+                left: 55%;
+                right: 50px;
+                
+            }
+            #suport{
+                left: 60%;
+                right: 50px;
+               
+            }
+            #storedetails{
+                left: 65%;
+                right: 50px;
+            }
+            #image{
+                height: 52.5px; 
+                width: 225px;
+                left: 10px;
+                right: 0;
+                top: 20px;
+                bottom: 0;
+                position: absolute;  
+                margin: none;
+                
+            }
+            #logoutimage{
+                height: 20px;
+                width: 20px;
+                left: -27px;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                position: absolute;
+
+            }
+            #profilpic{
+                height: 40px;
+                width: 40px;
+                left: 68%;
+                right: 20%;
+                top: 15px;
+                bottom: 95%;
+                border-radius: 50%;
+                position:relative;
+                border: 5px solid rgb(177, 125, 42);
+                background-color: white;
+
+            }
+            
+            #sidebar{
+                background-color: lightgray;
+                width: 250px;
+                height: 100%;
+                position: fixed;
+                z-index: 1;
+            }
+            .customlink2{
+                text-decoration: none;
+                color: rgb(38, 60, 82);
+                position: relative;
+                font-size: 18px; 
+                left: 45px;
+                right: 90%;
+            }
+            #db{
+                top: 200px;
+                bottom: 70%;
+            }
+            #mo{
+                top: 220px;
+                bottom: 69%;
+            }
+            #mp{
+                top: 240px;
+                bottom: 68%;
+            }
+            #np{
+                top: 260px;
+                bottom: 67%;
+            }
+            #st{
+                top: 280px;
+                bottom: 66%;
+            }
+            #ot{
+                top: 300px;
+                bottom: 65%;
+            }
+            #pm{
+                top: 320px;
+                bottom: 64%;
+            }
+            #sm{
+                top:340px;
+                bottom: 63%;
+            }
+            .orders-container {
+                position: relative;
+            }
+            .section {
+                 position: absolute;
+                 top: 1000px;
+                 left: 50%;
+                 display: none;
+            }
+            .section:first-child {
+                display: block;
+            }
+            .section-selector {
+                margin-top: 20px;
+            }
+            #midlebar{
+                background-color: white;
+                height: 1000px;
+                width: 80%;
+                top: 200px;
+                left: 275px;
+                position: absolute;
+                border-bottom: 75px solid rgb(215, 215, 215);
+            }
+            .orders-container {
+  position: relative;
+}
+
+.section {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  display: none;
+}
+#confirmorders{
+    background-color: white;
+    padding-left: 25px;
+    padding-top: 25px;
+    width: 98%;
+    top: 0;
+    left: 0;
+    
+}
+
+.section:first-child {
+  display: block;
+}
+
+.section-selector {
+  margin-top: 20px;
+}
+#con{
+  background-color: white;
+    border: none;
+    left: -2px;
+
+}
+#can{
+    
+    position: absolute;
+    left: 131px;
+    border: none;
+}
+#up{
+   
+    position: absolute;
+    left: 258px;
+    border: none;
+
+}
+.sbutton {
+  position: absolute;
+  top: -34px;   
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 15px 15px 0 0;
+}
+.sbutton {
+  background-color: lightgray; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.sbutton:hover {
+  background-color: white;
+  color: black;
+}
+.sbutton.clicked{
+    background-color: white;
+  color: black;
+}
+#next{
+  border: none;
+  color: wheat;
+  background-color: rgb(177, 125, 42);
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  left: 90%;
+  top: 92%;
+  font-size: 18px;
+  font-weight: bold;
+}
+#next:hover{
+  background-color: red;
+}
+#previous{
+  border: none;
+  color: wheat;
+  background-color: rgb(177, 125, 42);
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  left: 60px;
+  top: 92%;
+  font-size: 18px;
+  font-weight: bold;
+}
+#previous:hover{
+  background-color: red;
+}
+
+    .search-input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 200px;
+    }
+    .search-button {
+      padding: 8px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #search{
+      position: absolute;
+      left: 73%;
+      top: 35px;
+    }
+    .search-button:hover{
+  background-color: red;
+}
+#ts{
+  position: absolute;
+    left: 348px;
+    border: none;
+
+} 
+#sp{
+  position: absolute;
+    left: 425px;
+    border: none;
+
+} 
+#cmp{
+  position: absolute;
+    left: 507px;
+    border: none;
+
+} 
+#cm{
+  position: absolute;
+    left: 608px;
+    border: none;
+
+}
+.conorder td{
+ 
+  height: 100px;
+  padding: 15px;
+  
+}
+.conorder th{
+  text-align: center;
+  height: 25px;
+  padding-bottom: 10px;
+}
+.conorder{
+  position: absolute;
+  top: 120px;
+  border-spacing: 0;
+  left: 50px;
+}
+.canorder th{
+  text-align: center;
+  height: 25px;
+  padding-bottom: 10px;
+
+}
+.canorder td{
+  height: 100px;
+  padding: 15px;
+
+}
+.canorder{
+  position: absolute;
+  top: 120px;
+  border-spacing: 0;
+  left: 50px;
+
+} 
+
+           
+        </style>
+    </head>
+    <body style="background-color: rgb(215, 215, 215);">
+        <div id="upbar">
+            <a href="dashbord.html" target="_blank" class="customLink" id="dashbord">Dashbord</a>
+            <a href="home.html" target="_blank"><img src="5.png"  id="image" > </a>
+            <a href="sellerIntaface.html" target="_blank" class="customLink" id="orders">Orders</a>
+            <a href="supotr.html" target="_blank" class="customLink" id="suport">Suport</a>
+            <a href="storedetails.html" target="_blank" class="customLink" id="storedetails">Store Details</a>
+            <a href="userdetails.html" target="_blank"><img src="66.png" alt="propic" id="profilpic"></a>
+            <a href="sellerlogin.html" target="_blank" class="customLink" id="logout"><img src="44.png" id="logoutimage">Log out </a>
+            
+            
+           
+        </div>
+        <div id="sidebar">
+            <a href="dashbord.html" target="_blank" class="customlink2" id="db">Dashbord</a> <br>
+            <a href="sellerIntaface.html" target="_blank" class="customlink2" id="mo">Manage Orders</a> <br>
+            <a href="products.html"  class="customlink2" id="mp">Manage Prodacts</a> <br>
+            <a href="postproduct.html" target="_blank" class="customlink2" id="np">Add New Product</a> <br>
+            <a href="shipingtemplate.html" target="_blank" class="customlink2" id="st">Shiping Templates</a> <br>
+            <a href="offertemplate.html" target="_blank" class="customlink2" id="ot">Offer Temlates</a> <br>
+            <a href="productmarketing.html" target="_blank" class="customlink2" id="pm">Product Marketing</a> <br>
+            <a href="storemarketing.html" target="_blank" class="customlink2" id="sm">Store Marketing</a>
+
+        </div>
+        <div id="midlebar">
+            <div class="orders-container">
+                <div class="section" id="confirmorders">
+                  <h2>Confirm Orders</h2>
+                  <table  class="conorder" >
+                    <tr>
+                        <th style=" border-right: 1px solid gray; border-bottom: 1px solid gray;  width: 50px;  ">#</th>
+                        <th style=" border-bottom: 1px solid gray;  width: 250px;  ">Item</th>
+                        <th style=" border-bottom: 1px solid gray;  width: 200px; border-left:1px solid gray; border-right: 1px solid gray; ">Amaunt</th>
+                        <th style=" border-bottom: 1px solid gray;  width: 100px; border-right: 1px solid gray;">Quantity</th>
+                        <th  style="border-bottom: 1px solid gray;  width: 200px; border-right: 1px solid gray;  ">Location</th>
+                        <th  style="border-bottom: 1px solid gray;   width: 200px;  ">Placed Time</th>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 3</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 3</td>
+                      </tr>
+                  </table>
+                </div>
+                
+               
+              </div>
+              
+              <div class="section-selector">
+                <a href="cancelorder.html" class="sbutton" id="con">Confirm Orders</a>
+                <a href="Cancel Orders.html" class="sbutton" id="can">Cancel Orders</a>
+                <a href="Un Paied.html" class="sbutton" id="up">Un Paied</a>
+                <a href="To Ship.html" class="sbutton" id="ts">To Ship</a>
+                <a href="Shipped.html" class="sbutton" id="sp">Shipped</a>
+                <a href="Completed.html" class="sbutton" id="cmp">Completed</a>
+                <a href="Complained.html" class="sbutton" id="cm">Complained</a>                
+                
+              </div>
+              <button id="next">Next</button>
+              <button id="previous"> Previous</button>
+             
+              <div id="search">
+                <input class="search-input" type="text" name="query" placeholder="Search...">
+                <button class="search-button" type="submit">Search</button>
+              </div>
+              
+              
+
+        </div>
+        
+    </body>
+</html>
